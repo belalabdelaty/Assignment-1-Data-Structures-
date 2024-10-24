@@ -25,6 +25,19 @@ public class PhoneList {
   // Methods
   public static void addContact(String name, String phoneNumber) {
 
+        ContactNode newContact = new ContactNode(name, phoneNumber);
+        if (head == null) { head = newContact; } 
+    
+        else {
+         ContactNode current = head;
+      
+         while (current.next != null) {
+             current = current.next;
+        }
+        
+        current.next = newContact;
+    }
+
   }
 
 
